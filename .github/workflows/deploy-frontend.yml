@@ -30,7 +30,7 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: cd frontend && npm ci
+        run: cd frontend && npm install
 
       - name: Build Next.js app
         env:

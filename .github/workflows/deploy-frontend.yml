@@ -40,7 +40,8 @@ jobs:
         run: cd frontend && npm run build
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        # БЫЛО: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./frontend/out
 
@@ -53,4 +54,5 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v3
+        # БЫЛО: actions/deploy-pages@v3
+        uses: actions/deploy-pages@v4
